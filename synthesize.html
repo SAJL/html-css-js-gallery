@@ -1,0 +1,33 @@
+<html>
+<meta charset="utf-8">
+
+<body>	
+    <script>
+    // This is where you can put your JavaScript
+
+    window.addEventListener('load', function() { // When the window loads, run this stuff
+
+    	var square = document.createElement('div'); // Create a div in the ether
+    	square.style.id = 'mySquare'; // give it an id
+    	
+    	square.style.width = '100px'; // give it a height
+    	square.style.height = '100px'; // and width
+    	
+    	square.style.backgroundColor = 'lightgreen'; // and color— Note the camelCase, 'background-color' in CSS turns into 'backgroundColor' in JS
+		square.style.opacity = '1';
+
+		square.style.transition = '1s'; // style its 'transition' attribute
+
+    	var body = document.getElementsByTagName('body')[0]; // grab the <body> tag— getElementsByTagName returns an array, so we need to grab the first element
+    	body.appendChild(square); // and now stick our ethereal square into the body
+
+    	square.addEventListener('click', function() {
+    		// and give our square a behavior when we click it, toggling it between 0.1 and 1
+    		// that weird notation is called 'ternary notation' — you can read more about it at https://msdn.microsoft.com/en-us/library/ie/be21c7hw%28v=vs.94%29.aspx
+    		square.style.opacity = (square.style.opacity == '0.1' ? '1' : '0.1');
+    	})
+    });
+    </script>
+</body>
+
+</html>

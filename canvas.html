@@ -1,0 +1,44 @@
+<html>
+<meta charset="utf-8">
+
+<head>
+    <style>
+    /*This is where you can put your CSS*/
+    </style>
+</head>
+
+<body>
+    <!-- This is where you can put your HTML -->
+    <canvas width='150' height='150' id='canvas'>
+        <!-- Note that we set the width and height as attributes, not in CSS.  This is because of the weird behavior of canvas.  You can read more at http://stackoverflow.com/questions/2588181/canvas-is-stretched-when-using-css-but-normal-with-width-height-properties -->
+    </canvas>
+
+    <script>
+    // This is where you can put your JavaScript
+
+    window.addEventListener('load', function() { // When the window loads, do this stuff
+        var canvas = document.getElementById('canvas'); // Grab the canvas
+        if (canvas.getContext) { // if we can draw in it
+            var ctx = canvas.getContext('2d'); // get a handle on the drawing functions
+
+            // Start drawing the path; see https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes for more
+            ctx.beginPath();
+            ctx.arc(75, 75, 50, 0, Math.PI * 2, true); // Outer circle
+
+            ctx.moveTo(110, 75);
+            ctx.arc(75, 75, 35, 0, Math.PI, false); // Mouth (clockwise)
+            
+            ctx.moveTo(65, 65);
+            ctx.arc(60, 65, 5, 0, Math.PI * 2, true); // Left eye
+            
+            ctx.moveTo(95, 65);
+            ctx.arc(90, 65, 5, 0, Math.PI * 2, true); // Right eye
+            
+            ctx.stroke(); // Actually render what we've traced
+            ctx.closePath();
+        }
+    });
+    </script>
+</body>
+
+</html>

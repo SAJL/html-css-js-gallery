@@ -1,0 +1,31 @@
+<html>
+<meta charset="utf-8">
+
+<head>
+    <style>
+    /*This is where you can put your CSS*/
+
+    /*This says, "Apply these rules to anything with the id of 'mySquare'"    */
+    #mySquare {
+    	width: 500px;
+    	height: 500px;
+    	background-color: lightgreen;
+    }
+
+    /* This uses what's called a 'pseudoselector', you can read more about them at https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes — Basically, they let you apply certain CSS styles _only_ when the element is in a certain state.  In this case, the styling is triggered when we hover over the element with the id 'mySquare' */
+    #mySquare:hover {
+    	transition: 1s;  /* This is where the action happens: it tells CSS to animate any changes in the CSS styling of these elements over one second*/
+    	border-radius: calc(500px/2); /* This sets how rounded the corners are—basically, when to start rounding the corner, so half of the width makes a circle */
+    }
+    </style>
+</head>
+
+<body>
+	<!-- This is where you can put your HTML -->
+	<div id='mySquare'></div>
+    <script>
+    // This is where you can put your JavaScript
+    </script>
+</body>
+
+</html>

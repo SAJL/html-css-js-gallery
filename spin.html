@@ -1,0 +1,41 @@
+<html>
+<meta charset="utf-8">
+
+<head>
+    <style>
+    /*This is where you can put your CSS*/
+
+    /*This says, "Apply these rules to anything with the id of 'mySquare'"    */
+    #mySquare {
+        width: 50%;
+        height: 500px;
+        background-color: lightblue;
+
+        transition: 1s; /* This is where the action happens: it tells CSS to animate any changes in the CSS styling of these elements over one second*/
+
+        /* Setting some of the text's styling to make it fill up the card */
+        font-family: "Courier New", monospace; /* Set a font, with a fallback */
+        text-transform: uppercase; /* capitalize everything */
+        font-size: 4.5em;
+        line-height: calc(500px/4); /* Since we set the height to 500px, we can make the line height 1/4 to fill up four lines */
+        text-align: center;
+    }
+
+    /* This uses what's called a 'pseudoselector', you can read more about them at https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes — Basically, they let you apply certain CSS styles _only_ when the element is in a certain state.  In this case, the styling is triggered when we hover over the element with the id 'mySquare' */
+    #mySquare:hover {
+        transform: rotate(180deg); /* This tells CSS to rotate our element 180 degrees */
+    }
+    </style>
+</head>
+
+<body>
+	<!-- This is where you can put your HTML -->
+	<div id='mySquare'>
+        Grumpy wizards make toxic brew for the evil Queen and Jack.   
+    </div>	
+    <script>
+    // This is where you can put your JavaScript
+    </script>
+</body>
+
+</html>

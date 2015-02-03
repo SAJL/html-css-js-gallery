@@ -1,0 +1,65 @@
+<html>
+<meta charset="utf-8">
+
+<head>
+    <style>
+    /*This is where you can put your CSS*/
+    
+    /* This sets the width and height of all divs that are _direct_ children of elements with the id of 'container'; in our case, all the colrs */
+    #container > div {
+        width: 100%;
+        height: calc(100%/7); /* Since we know we have seven colors, we can make it fill up the screen */
+    }
+    /* ROYGBIV */
+    #one {
+        background-color: red;
+    }
+    #two {
+        background-color: orange;
+    }
+    #three {
+        background-color: yellow;
+    }
+    #four {
+        background-color: green;
+    }
+    #five {
+        background-color: blue;
+    }
+    #six {
+        background-color: indigo;
+    }
+    #seven {
+        background-color: violet;
+    }
+    </style>
+</head>
+
+<body>
+    <!-- This is where you can put your HTML -->
+    <div id='container'>
+        <div id='one'></div>
+        <div id='two'></div>
+        <div id='three'></div>
+        <div id='four'></div>
+        <div id='five'></div>
+        <div id='six'></div>
+        <div id='seven'></div>
+    </div>
+    <script>
+    // This is where you can put your JavaScript
+
+    window.addEventListener('load', function() { // When the window loads 
+    	window.addEventListener('mousedown', function() { // Run this function whenever mousedown happens
+    		var colors = document.querySelectorAll('#container > div'); // Get all the divs that are direct children of elements with the id of container
+    		var colors = Array.prototype.slice.call(colors); // Convert that collection into an array (dumb JavaScript stuff)
+    		for (var i = 0; i < colors.length; i = i + 1) { // Make a new variable i, and cycle through it, making it one greater each time as long as it is less than the length of our colors array
+    			var randomInteger = Math.floor(Math.random()*7); // Get a random number between 0-7
+    			document.getElementById('container').appendChild(colors[randomInteger]); // And grab that color element and stick it at the bottom of #container
+    		}
+    	});
+    });
+    </script>
+</body>
+
+</html>

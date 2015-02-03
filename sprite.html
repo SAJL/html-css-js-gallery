@@ -1,0 +1,35 @@
+<html>
+<meta charset="utf-8">
+
+<head>
+    <style>
+    /*This is where you can put your CSS*/
+
+    /*CSS for the frame*/
+    #frame {
+        width: 50px;
+        height: 72px;
+
+        /* Setting the background for #frame to the sprite sheet; you can read more about this approach at http://blog.teamtreehouse.com/css-sprite-sheet-animations-steps */
+	    background: url(https://s3.amazonaws.com/dgmde15githubio/bakhtiar-wavesheet.png) left top; 
+    }
+    /* This is where the animation happens: it tells us to run wave-animate in 10 steps, which moves the background position from 0 to -500px, and does this animation when we hover over #frame */;
+    #frame:hover {
+        -webkit-animation: wave-animate 1s steps(10);
+    }
+    @-webkit-keyframes wave-animate {
+        from {
+            background-position: 0px;
+        }
+        to {
+            background-position: calc(-1*10*50px); /* i.e. cycle through ten steps */
+        }
+    }
+   </style>
+</head>
+
+<body>
+    <div id="frame"></div>
+</body>
+
+</html>
