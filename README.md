@@ -1,4 +1,4 @@
-# A small gallery of CSS & JavaScript Effects
+# A small gallery of CSS & JavaScript Effects (DGMD E-15, Spring 2015)
 
 Included here are ten, stripped down examples of effects you might consider using as part of your customization of your card on [our `/people` page](http://dgmde15.github.io/people).  Each of these links directly to the demo, but you can see the full source code below, too.
 
