@@ -2,6 +2,10 @@
 
 Included here are ten, stripped down examples of effects you might consider using as part of your customization of your card on [our `/people` page](http://dgmde15.github.io/people).  Each of these links directly to the demo, but you can see the full source code below, too.
 
+To play around with these demos, clone this repository by running `git clone https://gist.github.com/8e881e01245989794c5e.git` in your terminal.  This will create an unfortunately-titled folder, `8e881e01245989794c5e` which you can `cd` (change directory) into.  Once there, you should be able to open up each HTML file in your own text editor and/or browser to explore.
+
+---
+
 In rough order of complexity:
 + [`font.html`](#file-font-html) loads a font remotely [from Google Fonts](https://www.google.com/fonts) and using it to change the font we use in a given `div`.
 
