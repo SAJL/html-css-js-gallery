@@ -29,4 +29,4 @@ In rough order of complexity:
 
 ---
 
-And finally, a boring PS: [`boilerplate.html`](#file-boilerplate-html) is a bare HTML stub you can use as a template for your own explorations.
+And finally, a boring PS: `boilerplate.html` is a bare HTML stub you can use as a template for your own explorations.
